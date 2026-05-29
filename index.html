@@ -1,0 +1,398 @@
+<!DOCTYPE html><html class="light" lang="es" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        .headline-font {
+            font-family: 'Be Vietnam Pro', sans-serif;
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-container": "#f5fff9",
+                    "on-secondary": "#ffffff",
+                    "primary-fixed": "#ffdbd1",
+                    "surface-container-high": "#eae7e8",
+                    "on-tertiary": "#ffffff",
+                    "on-surface-variant": "#5d4038",
+                    "on-secondary-fixed-variant": "#004881",
+                    "on-secondary-container": "#003663",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-fixed-variant": "#005140",
+                    "surface-tint": "#b12d00",
+                    "secondary": "#0060a9",
+                    "surface-dim": "#dcd9da",
+                    "secondary-container": "#4ba1fd",
+                    "on-tertiary-fixed": "#002018",
+                    "primary-fixed-dim": "#ffb5a0",
+                    "inverse-surface": "#303031",
+                    "outline-variant": "#e7bdb2",
+                    "background": "#fcf8f9",
+                    "error-container": "#ffdad6",
+                    "surface-container": "#f0edee",
+                    "on-surface": "#1b1b1c",
+                    "surface": "#fcf8f9",
+                    "surface-variant": "#e5e2e3",
+                    "tertiary-fixed-dim": "#53dcb9",
+                    "surface-container-low": "#f6f3f4",
+                    "tertiary": "#006954",
+                    "secondary-fixed": "#d3e4ff",
+                    "surface-container-highest": "#e5e2e3",
+                    "secondary-fixed-dim": "#a2c9ff",
+                    "error": "#ba1a1a",
+                    "inverse-on-surface": "#f3f0f1",
+                    "tertiary-fixed": "#73f9d4",
+                    "surface-bright": "#fcf8f9",
+                    "on-background": "#1b1b1c",
+                    "outline": "#926f66",
+                    "on-primary-fixed": "#3b0900",
+                    "on-secondary-fixed": "#001c38",
+                    "on-error": "#ffffff",
+                    "on-primary-fixed-variant": "#872000",
+                    "tertiary-container": "#00846b",
+                    "inverse-primary": "#ffb5a0",
+                    "primary": "#ad2c00",
+                    "on-primary-container": "#fffbff",
+                    "on-error-container": "#93000a",
+                    "primary-container": "#d83900",
+                    "on-primary": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "sm": "8px",
+                    "gutter": "16px",
+                    "md": "16px",
+                    "xs": "4px",
+                    "container-max": "1200px",
+                    "base": "4px",
+                    "lg": "24px",
+                    "xl": "48px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Be Vietnam Pro"],
+                    "headline-lg-mobile": ["Be Vietnam Pro"],
+                    "label-sm": ["Inter"],
+                    "display-lg": ["Be Vietnam Pro"],
+                    "body-lg": ["Inter"],
+                    "label-md": ["Inter"],
+                    "headline-sm": ["Be Vietnam Pro"],
+                    "body-md": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["22px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "label-sm": ["11px", {"lineHeight": "1", "fontWeight": "500"}],
+                    "display-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-lg": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-md": ["12px", {"lineHeight": "1", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                    "headline-sm": ["18px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "body-md": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  <style data-stitch-cursor=""></style><style data-stitch-scroll-lock=""></style></head>
+<body class="bg-background text-on-surface">
+<!-- Top Navigation Shell -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center h-14 px-gutter bg-surface dark:bg-background border-b border-outline-variant dark:border-outline shadow-sm">
+<div class="flex items-center gap-sm">
+<button class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-surface-variant active:scale-95 transition-all duration-200">
+<span class="material-symbols-outlined text-primary">menu</span>
+</button>
+<h1 class="text-headline-lg-mobile font-headline-lg-mobile font-bold text-primary dark:text-inverse-primary leading-none">Community</h1>
+</div>
+<div class="hidden md:flex flex-1 max-w-xl mx-xl">
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+<input class="w-full h-10 bg-surface-container-low border border-outline-variant rounded-xl pl-10 pr-4 focus:ring-2 focus:ring-secondary focus:outline-none text-body-md transition-all" placeholder="Buscar en Community" type="text">
+</div>
+</div>
+<div class="flex items-center gap-sm">
+<button class="md:hidden flex items-center justify-center w-10 h-10 rounded-full hover:bg-surface-variant transition-all">
+<span class="material-symbols-outlined text-on-surface-variant">search</span>
+</button>
+<div class="w-8 h-8 rounded-full bg-secondary overflow-hidden flex items-center justify-center text-white active:scale-95 transition-all duration-200 cursor-pointer">
+<img alt="User" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDf1PIVyk6HkVtyuvvfrih1CM1E_V5i8kjhCUM5OEovYSaRhmLshkSexUgO0ott-rPChw7acz4S6u7T3Tq_6mzSRdmdwOPGgkjFhSiCK2TKf8F0IjKucUzYzpScv9-Ujhv_vv-5LWzXofZ9a6LSblChv5LcqDTydI1pmd2fBZFmG0Xq6eOwxP-5MlUcjkuDHNrGWfeEytfV-Qw8GB3t-6nCjLyETGmwO4tNOrF5mFqouy07dS2d5ouTw7nzQDmGK4B32b7turbn0rUm">
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="pt-14 pb-20 md:pb-gutter min-h-screen container mx-auto max-w-container-max px-gutter md:grid md:grid-cols-12 md:gap-lg">
+<!-- Sidebar Navigation (Desktop Only) -->
+<aside class="hidden md:block md:col-span-3 pt-lg">
+<nav class="sticky top-20 space-y-xs">
+<a class="flex items-center gap-md p-md rounded-xl bg-surface-variant text-on-surface font-bold transition-all" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="text-body-md">Home</span>
+</a>
+<a class="flex items-center gap-md p-md rounded-xl text-on-surface-variant hover:bg-surface-container-high transition-all" href="#">
+<span class="material-symbols-outlined">explore</span>
+<span class="text-body-md">Explorar</span>
+</a>
+<a class="flex items-center gap-md p-md rounded-xl text-on-surface-variant hover:bg-surface-container-high transition-all" href="#">
+<span class="material-symbols-outlined">trending_up</span>
+<span class="text-body-md">Populares</span>
+</a>
+<div class="h-px bg-outline-variant my-md mx-md"></div>
+<div class="px-md py-sm text-label-sm uppercase tracking-wider text-on-surface-variant/60 font-bold">Tus Comunidades</div>
+<a class="flex items-center gap-md p-md rounded-xl text-on-surface-variant hover:bg-surface-container-high transition-all" href="#">
+<div class="w-6 h-6 rounded-full bg-primary-container text-white flex items-center justify-center text-[10px]">T</div>
+<span class="text-body-md">r/tecnologia</span>
+</a>
+<a class="flex items-center gap-md p-md rounded-xl text-on-surface-variant hover:bg-surface-container-high transition-all" href="#">
+<div class="w-6 h-6 rounded-full bg-secondary-container text-white flex items-center justify-center text-[10px]">D</div>
+<span class="text-body-md">r/diseño_ui</span>
+</a>
+</nav>
+</aside>
+<!-- Feed Section -->
+<section class="md:col-span-6 pt-lg space-y-lg"><div class="flex items-center gap-md py-sm px-gutter md:px-0 border-b border-outline-variant/30">
+    <div class="relative flex-1 max-w-[140px] group">
+    <button class="w-full flex items-center gap-xs bg-surface-container-high text-on-surface-variant font-bold text-label-md px-md py-2 rounded-xl border-none focus:ring-2 focus:ring-primary/20">
+        <span class="material-symbols-outlined text-[18px]">local_fire_department</span>
+        <span class="flex-1 text-left">Hot</span>
+        <span class="material-symbols-outlined text-[18px]">expand_more</span>
+    </button>
+</div>
+    <div class="relative flex-1 max-w-[140px] group">
+    <button class="w-full flex items-center gap-xs bg-surface-container-high text-on-surface-variant font-medium text-label-md px-md py-2 rounded-xl border-none focus:ring-2 focus:ring-primary/20">
+        <span class="material-symbols-outlined text-[18px]">calendar_today</span>
+        <span class="flex-1 text-left">Hoy</span>
+        <span class="material-symbols-outlined text-[18px]">expand_more</span>
+    </button>
+</div>
+</div>
+<!-- Post Card 1 -->
+<article class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden border border-outline-variant/30 flex transition-all hover:shadow-md">
+<!-- Voting Sidebar -->
+<div class="w-12 bg-surface-container-low flex flex-col items-center py-md gap-xs">
+<button class="w-8 h-8 rounded hover:bg-primary/10 text-on-surface-variant hover:text-primary transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined">arrow_upward</span>
+</button>
+<span class="text-label-md font-bold text-on-surface">12.4k</span>
+<button class="w-8 h-8 rounded hover:bg-secondary/10 text-on-surface-variant hover:text-secondary transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined">arrow_downward</span>
+</button>
+</div>
+<!-- Post Content -->
+<div class="flex-1 p-md flex flex-col md:flex-row gap-md">
+<div class="flex-1 space-y-sm">
+<div class="flex items-center gap-xs flex-wrap">
+<span class="text-label-md font-bold text-primary">r/tecnologia</span>
+<span class="text-on-surface-variant/40">•</span>
+<span class="text-label-md text-on-surface-variant">Publicado por u/tech_lover</span>
+<span class="text-on-surface-variant/40">•</span>
+<span class="text-label-md text-on-surface-variant">hace 5h</span>
+</div>
+<h2 class="text-headline-sm font-headline-sm text-on-surface leading-tight">
+                            La nueva generación de procesadores cuánticos promete revolucionar la IA en menos de dos años.
+                        </h2>
+<div class="flex gap-xs">
+<span class="px-sm py-xs bg-surface-container-high rounded-full text-label-sm text-on-surface-variant font-medium">Noticias</span>
+<span class="px-sm py-xs bg-primary-fixed text-on-primary-fixed-variant rounded-full text-label-sm font-medium">Hot 🔥</span>
+</div>
+<!-- Post Actions -->
+<div class="pt-sm flex items-center gap-md">
+<button class="flex items-center gap-xs text-on-surface-variant hover:bg-surface-variant p-xs px-sm rounded-lg transition-colors">
+<span class="material-symbols-outlined text-[20px]">chat_bubble</span>
+<span class="text-label-md">842</span>
+</button>
+<button class="flex items-center gap-xs text-on-surface-variant hover:bg-surface-variant p-xs px-sm rounded-lg transition-colors">
+<span class="material-symbols-outlined text-[20px]">share</span>
+<span class="text-label-md">Compartir</span>
+</button>
+<button class="flex items-center gap-xs text-on-surface-variant hover:bg-surface-variant p-xs px-sm rounded-lg transition-colors">
+<span class="material-symbols-outlined text-[20px]">bookmark</span>
+<span class="text-label-md">Guardar</span>
+</button>
+</div>
+</div>
+<!-- Thumbnail -->
+<div class="w-full md:w-32 h-32 md:h-32 bg-surface-container rounded-lg overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="A high-tech digital representation of a quantum computing chip glowing with electric blue circuits on a dark, reflective surface. The lighting is dramatic and moody, with sharp contrasts and neon accents. The aesthetic is clean, professional, and future-forward, perfectly aligned with a premium modern tech publication. High resolution digital art style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5ozUKLlXiir1FcnEJK49fHkyzjnZumoYpTLIiqI8KRHUce-RiP9sZivJ5e5kJ7Zv384l041YYm4tLttP9aaQlHWZDaMObTVKAtSgSDXdPgpF7Sy4wPgSiXsw02nsPZrM5hRZx6CFrALZRk0UeF_dGQxJ_LNzcrmI799cVDWT4q8qixxjl4Gwk9U_5Jtu5JiX6h-XE5kxVvSDP-7KEdegCOwWh3Pu8Kk-zCp5gvUiKTlKq6w8rGqjq4l53EE7xa5JaN2YJscDyAKqw">
+</div>
+</div>
+</article>
+<!-- Post Card 2 -->
+<article class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden border border-outline-variant/30 flex transition-all hover:shadow-md">
+<div class="w-12 bg-surface-container-low flex flex-col items-center py-md gap-xs">
+<button class="w-8 h-8 rounded hover:bg-primary/10 text-on-surface-variant hover:text-primary transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined">arrow_upward</span>
+</button>
+<span class="text-label-md font-bold text-on-surface">5.8k</span>
+<button class="w-8 h-8 rounded hover:bg-secondary/10 text-on-surface-variant hover:text-secondary transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined">arrow_downward</span>
+</button>
+</div>
+<div class="flex-1 p-md flex flex-col md:flex-row gap-md">
+<div class="flex-1 space-y-sm">
+<div class="flex items-center gap-xs flex-wrap">
+<span class="text-label-md font-bold text-primary">r/diseño_ui</span>
+<span class="text-on-surface-variant/40">•</span>
+<span class="text-label-md text-on-surface-variant">Publicado por u/pixel_perfect</span>
+<span class="text-on-surface-variant/40">•</span>
+<span class="text-label-md text-on-surface-variant">hace 8h</span>
+</div>
+<h2 class="text-headline-sm font-headline-sm text-on-surface leading-tight">
+                            ¿Sigue siendo el Minimalismo la mejor opción para aplicaciones empresariales complejas en 2024?
+                        </h2>
+<div class="flex gap-xs">
+<span class="px-sm py-xs bg-surface-container-high rounded-full text-label-sm text-on-surface-variant font-medium">Debate</span>
+</div>
+<div class="pt-sm flex items-center gap-md">
+<button class="flex items-center gap-xs text-on-surface-variant hover:bg-surface-variant p-xs px-sm rounded-lg transition-colors">
+<span class="material-symbols-outlined text-[20px]">chat_bubble</span>
+<span class="text-label-md">256</span>
+</button>
+<button class="flex items-center gap-xs text-on-surface-variant hover:bg-surface-variant p-xs px-sm rounded-lg transition-colors">
+<span class="material-symbols-outlined text-[20px]">share</span>
+<span class="text-label-md">Compartir</span>
+</button>
+</div>
+</div>
+<div class="w-full md:w-32 h-32 md:h-32 bg-surface-container rounded-lg overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="A clean, minimalist desktop workspace featuring a high-end monitor displaying a sophisticated UI design dashboard. The room is filled with soft, natural morning light, creating a professional and serene atmosphere. The color palette is dominated by pristine whites, soft grays, and a single vibrant orange accent. The composition is structured and editorial, emphasizing clarity and modern corporate aesthetics." src="https://lh3.googleusercontent.com/aida-public/AB6AXuConAn7ULNcxU3WOehF4yRRc5zhwV22WWjMZy-fOXKmrNJUZFnk-74ooPzAzrDpDg_a39dAOo0vqCzodJECPspqqRwg3C1RxcBI2JWS7MOsye4QR19LM3HVfe5cBN6DZA7dC3ozzxZcmNd7BtlytFfcqNuQaZtCO126stwZGgPgPN4aOqBxKBPnb8q5IYsQTwx8KPSQOx0uMvaUSwJhRls8CXEAMZ_1MNlqlniVjxb0rMdFSr74HGmjC1dMGGtEX2BapDPjdS14cWPp">
+</div>
+</div>
+</article>
+<!-- Post Card 3 (Text Focus) -->
+<article class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden border border-outline-variant/30 flex transition-all hover:shadow-md">
+<div class="w-12 bg-surface-container-low flex flex-col items-center py-md gap-xs">
+<button class="w-8 h-8 rounded hover:bg-primary/10 text-on-surface-variant hover:text-primary transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined">arrow_upward</span>
+</button>
+<span class="text-label-md font-bold text-on-surface">2.1k</span>
+<button class="w-8 h-8 rounded hover:bg-secondary/10 text-on-surface-variant hover:text-secondary transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined">arrow_downward</span>
+</button>
+</div>
+<div class="flex-1 p-md space-y-sm">
+<div class="flex items-center gap-xs">
+<span class="text-label-md font-bold text-primary">r/preguntas</span>
+<span class="text-on-surface-variant/40">•</span>
+<span class="text-label-md text-on-surface-variant">Publicado por u/curious_mind</span>
+<span class="text-on-surface-variant/40">•</span>
+<span class="text-label-md text-on-surface-variant">hace 12h</span>
+</div>
+<h2 class="text-headline-sm font-headline-sm text-on-surface leading-tight">
+                        ¿Cuál es el mejor consejo profesional que has recibido y que cambió totalmente tu forma de trabajar?
+                    </h2>
+<p class="text-body-md text-on-surface-variant line-clamp-3">
+                        Llevo 5 años en el sector y siento que me he estancado. Me encantaría leer vuestras historias sobre mentores, errores que se convirtieron en lecciones o simples frases que os abrieron los ojos.
+                    </p>
+<div class="pt-sm flex items-center gap-md">
+<button class="flex items-center gap-xs text-on-surface-variant hover:bg-surface-variant p-xs px-sm rounded-lg transition-colors">
+<span class="material-symbols-outlined text-[20px]">chat_bubble</span>
+<span class="text-label-md">1.2k</span>
+</button>
+<button class="flex items-center gap-xs text-on-surface-variant hover:bg-surface-variant p-xs px-sm rounded-lg transition-colors">
+<span class="material-symbols-outlined text-[20px]">share</span>
+<span class="text-label-md">Compartir</span>
+</button>
+</div>
+</div>
+</article>
+</section>
+<!-- Right Sidebar (Desktop Only) -->
+<aside class="hidden md:block md:col-span-3 pt-lg">
+<div class="sticky top-20 space-y-lg">
+<!-- Community Card -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant shadow-sm overflow-hidden">
+<div class="h-12 bg-primary flex items-center px-md">
+<span class="text-on-primary font-bold text-label-md">Comunidades Destacadas</span>
+</div>
+<div class="p-md space-y-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-sm">
+<span class="text-label-md font-bold text-on-surface">1</span>
+<div class="w-8 h-8 rounded-full bg-surface-variant"></div>
+<span class="text-body-md font-medium">r/mexico</span>
+</div>
+<button class="text-label-md font-bold text-secondary px-sm py-xs hover:bg-secondary-container/10 rounded-full transition-colors">Unirse</button>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-sm">
+<span class="text-label-md font-bold text-on-surface">2</span>
+<div class="w-8 h-8 rounded-full bg-surface-variant"></div>
+<span class="text-body-md font-medium">r/programacion</span>
+</div>
+<button class="text-label-md font-bold text-secondary px-sm py-xs hover:bg-secondary-container/10 rounded-full transition-colors">Unirse</button>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-sm">
+<span class="text-label-md font-bold text-on-surface">3</span>
+<div class="w-8 h-8 rounded-full bg-surface-variant"></div>
+<span class="text-body-md font-medium">r/gaming</span>
+</div>
+<button class="text-label-md font-bold text-secondary px-sm py-xs hover:bg-secondary-container/10 rounded-full transition-colors">Unirse</button>
+</div>
+<button class="w-full py-sm bg-surface-container-high text-on-surface font-bold text-label-md rounded-full hover:bg-surface-variant transition-colors">Ver Todo</button>
+</div>
+</div>
+<!-- Footer Links -->
+<div class="px-md text-label-sm text-on-surface-variant/60 flex flex-wrap gap-x-md gap-y-xs">
+<a class="hover:underline" href="#">Ayuda</a>
+<a class="hover:underline" href="#">Privacidad</a>
+<a class="hover:underline" href="#">Términos</a>
+<a class="hover:underline" href="#">Contrato de Usuario</a>
+<div class="w-full pt-md text-[10px]">© 2024 Community Inc. Todos los derechos reservados.</div>
+</div>
+</div>
+</aside>
+</main>
+<!-- Bottom Navigation Shell (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center h-16 bg-surface dark:bg-background px-xs pb-safe border-t border-outline-variant dark:border-outline shadow-md z-50">
+<a class="flex flex-col items-center justify-center text-primary dark:text-inverse-primary font-bold flex-1 active:scale-90 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="text-label-md font-label-md mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant flex-1 active:scale-90 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined">explore</span>
+<span class="text-label-md font-label-md mt-1">Explore</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant flex-1 active:scale-90 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined">add_circle</span>
+<span class="text-label-md font-label-md mt-1">Create</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant flex-1 active:scale-90 transition-transform duration-150 relative" href="#">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-1 right-1/2 translate-x-3 w-2 h-2 bg-primary rounded-full"></span>
+<span class="text-label-md font-label-md mt-1">Inbox</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant flex-1 active:scale-90 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-label-md font-label-md mt-1">Profile</span>
+</a>
+</nav>
+<!-- Floating Action Button (Mobile Context) -->
+<button class="md:hidden fixed right-gutter bottom-20 w-14 h-14 bg-primary-container text-on-primary-container rounded-xl shadow-lg flex items-center justify-center active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[28px]">add</span>
+</button>
+
+
+</body></html>
